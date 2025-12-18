@@ -1,173 +1,193 @@
-/* Reseteo básico */
+/* Selecciona todos los elementos de la página */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;                    /*Elimina el espacio exterior automático de los navegadores */
+    padding: 0;                   /*Elimina el espacio interior automático */
+    box-sizing: border-box;       /*Mantiene el tamaño del elemento fijo aunque sumes bordes o padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía principal y de respaldo */
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-hr{
-    border-radius: 50px;
-    border: #0eb877;
-    padding: 2px;
-    transform: skewX(10deg);
+    background-color: #f9f9f9;    /*Color de fondo suave para que el contenido resalte */
+    color: #333;                  /*Color de texto gris oscuro para mejor contraste y lectura */
+    line-height: 1.6;             /*Altura de línea para que los textos no se vean amontonados */
 }
 
 .logo {
-    color: #377048;
+    color: #377048;               /*Color específico para la identidad visual de la marca */
 }
 
 /* --- HEADER Y NAVEGACIÓN (FLEXBOX) --- */
 .containe-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background: #fff;
+    display: flex;                /*Convierte el contenedor en una caja flexible */
+    justify-content: space-between; /*Empuja el logo a la izquierda y el menú a la derecha */
+    align-items: center;          /*Centra verticalmente el logo y los enlaces */
+    padding: 20px 5%;             /*Espaciado interno: 20px arriba/abajo y 5% a los lados */
+    background: #fff;             /*Fondo blanco limpio para la barra de navegación */
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: flex;                /*Permite que los elementos internos se alineen en fila */
+    align-items: center;          /*Alineación vertical perfecta */
+    gap: 20px;                    /*Espacio fijo entre el menú y posibles botones extra */
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+    display: flex;                /*Los elementos de la lista se colocan uno al lado del otro */
+    list-style: none;             /*Quita los puntos negros clásicos de las listas */
+    gap: 20px;                    /*Espacio uniforme entre cada opción del menú */
 }
 
 .navbar ul a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 500;
+    text-decoration: none;        /*Quita el subrayado predeterminado de los enlaces */
+    color: #555;                  /*Gris medio para un diseño más moderno */
+    font-weight: 500;             /*Grosor de letra intermedio para resaltar el menú */
 }
 
 .button, .button1 {
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
+    padding: 10px 20px;           /*Tamaño del botón (alto y ancho interno) */
+    border-radius: 5px;           /*Curvatura suave en las esquinas */
+    cursor: pointer;              /*Muestra la "manita" al pasar el ratón para indicar clic */
+    border: none;                 /* Quita el borde gris tosco que traen los botones por defecto */
 }
 
 .button1 {
-    background-color: #54bd95;
-    color: white;
+    background-color: #54bd95;    /*Color verde llamativo para la acción principal */
+    color: white;                 /*Texto blanco para que resalte sobre el fondo verde */
 }
 
 /* --- HERO SECTION (GRID) --- */
 .padre-header {
-    padding: 50px 5%;
+    padding: 50px 5%;             /* Espacio amplio alrededor de la sección principal */
 }
 
 .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    gap: 40px;
-    align-items: center;
+    display: grid;                /* Crea una cuadrícula para organizar el contenido principal */
+    grid-template-columns: 1fr 1fr; /* Divide la pantalla en 2 columnas iguales (texto e imagen) */
+    gap: 40px;                    /* Separación entre la columna de texto y la de imagen */
+    align-items: center;          /* Centra el contenido verticalmente si una columna es más larga */
 }
 
 .col-1 h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 20px;
+    font-size: 3rem;              /* Tamaño de letra muy grande para el impacto visual */
+    line-height: 1.1;             /* Reduce el espacio entre líneas del título para que se vea compacto */
+    margin-bottom: 20px;          /* Separa el título del texto o botones que sigan */
 }
 
 .col-2 img {
-    width: 100%;
-    border-radius: 20px;
-    background-color: #ddd; /* Temporal para visualizar */
+    width: 100%;                  /* La imagen siempre ocupa el ancho total de su columna */
+    border-radius: 20px;          /* Esquinas muy redondeadas para un look moderno */
+    background-color: #ddd;       /* Color de respaldo por si la imagen no carga */
 }
 
 /* --- LOGOS EMPRESAS (FLEXBOX) --- */
 .caja-abajo {
-    padding: 40px 5%;
-    text-align: center;
+    padding: 40px 5%;             /* Margen interno para la sección de colaboradores */
+    text-align: center;           /* Centra el título de esta sección */
 }
 
 .caja-abajo ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    margin-top: 20px;
+    display: flex;                /* Pone los logos en una fila flexible */
+    justify-content: space-around; /* Reparte los logos equitativamente en todo el ancho */
+    align-items: center;          /* Alinea todos los logos por su centro vertical */
+    flex-wrap: wrap;              /* Si hay muchos logos, pasan a la siguiente fila automáticamente */
+    list-style: none;             /* Limpia el estilo de lista */
+    margin-top: 20px;             /* Separación con el título superior */
 }
 
 /* --- MAIN / SUPPORT SECTION (GRID) --- */
 .containe-main {
-    padding: 80px 5%;
+    padding: 80px 5%;             /* Espaciado de sección grande para dar "aire" al diseño */
 }
 
-/* Estructura de la sección de soporte */
 section:first-child {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    display: grid;                /* Rejilla para la primera sección del contenido principal */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 60px;                    /* Espacio de separación generoso entre bloques */
 }
 
 .caja2 {
-    display: grid;
-    grid-template-columns: 1fr; /* Columna única para ítems de lista */
-    gap: 20px;
+    display: grid;                /* Rejilla interna para elementos de soporte */
+    grid-template-columns: 1fr;   /* Una sola columna (apilados verticalmente) */
+    gap: 20px;                    /* Espacio entre cada ítem de la lista */
 }
 
 /* --- FOOTER (GRID) --- */
 .containe-footer {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 60px 5%;
-    margin-top: 50px;
+    background-color: #1e1e1e;    /* Color oscuro para el pie de página */
+    color: white;                 /* Letras blancas para legibilidad sobre fondo oscuro */
+    padding: 60px 5%;             /* Espaciado interno grande */
+    margin-top: 50px;             /* Separa el footer de la sección anterior */
 }
 
 .padre-footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Columna de logo más pequeña */
-    gap: 40px;
+    display: grid;                /* Rejilla principal del footer */
+    grid-template-columns: 1fr 2fr; /* Logo a la izquierda (1 parte) y links a la derecha (2 partes) */
+    gap: 40px;                    /* Espacio entre el logo y las columnas de enlaces */
 }
 
 .hijo2-footer ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas: Support, Help, Product */
-    list-style: none;
-    gap: 20px;
+    display: grid;                /* Los enlaces del footer se organizan en su propia rejilla */
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales automáticamente */
+    list-style: none;             /* Quita los puntos de la lista */
+    gap: 20px;                    /* Espacio entre las columnas de soporte, ayuda y producto */
 }
 
 .hijo2-footer h3 {
-    margin-bottom: 15px;
-    color: #54bd95;
+    margin-bottom: 15px;          /* Separa el título de los enlaces inferiores */
+    color: #54bd95;               /* Usa el color de la marca para los títulos del footer */
 }
 
 .hijo2-footer li {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: #ccc;
+    margin-bottom: 8px;           /* Espacio entre cada enlace de la lista */
+    font-size: 0.9rem;            /* Letra ligeramente más pequeña para el pie de página */
+    color: #ccc;                  /* Gris claro para que no brille tanto como el título */
 }
 
-/* --- RESPONSIVE (ADAPTACIÓN A MÓVILES) --- */
-@media (max-width: 768px) {
+
+/* ============================================================
+   ESTILOS PARA DISPOSITIVOS MEDIANOS (Tablets y Monitores: 768px a 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+    /* Ajustamos el contenedor principal para que no esté tan apretado */
     .row, section:first-child, .padre-footer {
-        grid-template-columns: 1fr; /* Todo a una sola columna */
+        grid-template-columns: 1fr 1fr; /*Mantenemos 2 columnas pero ajustamos el espacio */
+        gap: 20px;                      /*Reducimos el espacio entre columnas */
+    }
+
+    .col-1 h1 {
+        font-size: 2.2rem;              /*Reducimos un poco el título para que quepa bien */
     }
 
     .containe-nav {
-        flex-direction: column;
+        padding: 15px 3%;               /*Reducimos márgenes laterales en tablets */
+    }
+}
+
+/* ============================================================
+   ESTILOS PARA DISPOSITIVOS PEQUEÑOS (Móviles: menos de 767px)
+   ============================================================ */
+@media (max-width: 767px) {
+    /* Pasamos a una sola columna para que todo se lea en vertical */
+    .row, section:first-child, .padre-footer {
+        grid-template-columns: 1fr;     /*Todo el contenido se apila en una columna */
+        text-align: center;             /*Centramos el texto para una mejor estética móvil */
+    }
+
+    .containe-nav {
+        flex-direction: column;         /*El logo queda arriba y el menú abajo */
         gap: 15px;
     }
 
     .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: wrap;                /*Permite que los links bajen si no hay espacio */
+        justify-content: center;        /*Centra los links en la pantalla del celular */
     }
 
     .hijo2-footer ul {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;     /*Las listas del footer se ponen una tras otra */
+    }
+
+    .col-1 h1 {
+        font-size: 1.8rem;              /*Título más pequeño para pantallas angostas */
     }
 }
