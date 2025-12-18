@@ -1,0 +1,173 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+hr{
+    border-radius: 50px;
+    border: #0eb877;
+    padding: 2px;
+    transform: skewX(10deg);
+}
+
+.logo {
+    color: #377048;
+}
+
+/* --- HEADER Y NAVEGACIÓN (FLEXBOX) --- */
+.containe-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+.button, .button1 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.button1 {
+    background-color: #54bd95;
+    color: white;
+}
+
+/* --- HERO SECTION (GRID) --- */
+.padre-header {
+    padding: 50px 5%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 40px;
+    align-items: center;
+}
+
+.col-1 h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.col-2 img {
+    width: 100%;
+    border-radius: 20px;
+    background-color: #ddd; /* Temporal para visualizar */
+}
+
+/* --- LOGOS EMPRESAS (FLEXBOX) --- */
+.caja-abajo {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.caja-abajo ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* --- MAIN / SUPPORT SECTION (GRID) --- */
+.containe-main {
+    padding: 80px 5%;
+}
+
+/* Estructura de la sección de soporte */
+section:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.caja2 {
+    display: grid;
+    grid-template-columns: 1fr; /* Columna única para ítems de lista */
+    gap: 20px;
+}
+
+/* --- FOOTER (GRID) --- */
+.containe-footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 60px 5%;
+    margin-top: 50px;
+}
+
+.padre-footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Columna de logo más pequeña */
+    gap: 40px;
+}
+
+.hijo2-footer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas: Support, Help, Product */
+    list-style: none;
+    gap: 20px;
+}
+
+.hijo2-footer h3 {
+    margin-bottom: 15px;
+    color: #54bd95;
+}
+
+.hijo2-footer li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* --- RESPONSIVE (ADAPTACIÓN A MÓVILES) --- */
+@media (max-width: 768px) {
+    .row, section:first-child, .padre-footer {
+        grid-template-columns: 1fr; /* Todo a una sola columna */
+    }
+
+    .containe-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hijo2-footer ul {
+        grid-template-columns: 1fr;
+    }
+}
